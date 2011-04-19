@@ -1,17 +1,17 @@
-body              { 
-  background: #303030 url(/vendor/images/default-noise.png) repeat scroll;
-  background: -webkit-gradient(radial, 40% bottom, 500, 70% top, 400, from(rgba(99, 99, 99, 0)), to(rgba(99, 99, 99, 0.2))), #303030 url(/vendor/images/default-noise.png) repeat scroll;
-}
+body          { background-color: #FFFFFF }
 
-body              { font-family: 'Architects Daughter', arial, serif; }
+body          { font-family: 'Architects Daughter', arial, serif; }
 
-h1, h2, h3, p, li { color: #EEEEEE; text-shadow: #000 2px 2px 4px }
-a                 { color: #499DFF; text-decoration: none }
+div.slide     { display: block !important; margin: 0; padding: 0 2em; color: #000000 }
+
+/* override centered */
+body .slide h1, h2, h3 { text-align: left; margin: 0 }
+body .slide p          { text-align: left; margin: 0 }
+
+a                 { color: #499DFF }
+ul, ol            { list-style-position: inside }
 ul                { list-style-type: disc }
-em                { color: #4BFF50 }
-strong            { color: #FFAB49; font-weight: bold }
+ol                { list-style-type: decimal }
 
-@media all and (max-device-width: 480px) {
-  body  { background: #303030 }
-  h1    { line-height: 1em; margin-bottom: 0.2em !important }
-}
+em            { color: #49FF50 }
+strong        { color: #FFAB49; font-weight: bold }
