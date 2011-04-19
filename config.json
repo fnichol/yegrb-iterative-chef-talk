@@ -28,7 +28,10 @@
     "refactored-prereqs.html",
     "refactored-cache-dir.html",
     "refactored-dl-extract.html",
-    "refactored-compile.html"
+    "refactored-compile.html",
+    "refactored-config-dirs.html",
+    "refactored-config-files.html",
+    "refactored-service.html"
   ],
   "title": "Iterative Chef",
   "plugins": [
