@@ -1,6 +1,6 @@
 {
   "slides":       ["welcome.html"],
-  "title":        "Your presentation",
+  "title":        "Iterative Chef",
   "plugins":      ["resize", "iphone"],
   "transitions":  "fade"
 }
