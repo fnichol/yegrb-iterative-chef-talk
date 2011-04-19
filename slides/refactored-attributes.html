@@ -1,0 +1,26 @@
+<h1>Refactored: Attributes</h1>
+
+<pre class="codehilite">
+<span class="n">default</span><span class="o">[</span><span class="ss">:nginx</span><span class="o">][</span><span class="ss">:version</span><span class="o">]</span>      <span class="o">=</span> <span class="s2">&quot;0.9.7&quot;</span>
+<span class="n">default</span><span class="o">[</span><span class="ss">:nginx</span><span class="o">][</span><span class="ss">:install_path</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;/opt/nginx-</span><span class="si">#{</span><span class="n">nginx</span><span class="o">[</span><span class="ss">:version</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">default</span><span class="o">[</span><span class="ss">:nginx</span><span class="o">][</span><span class="ss">:src_binary</span><span class="o">]</span>   <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">nginx</span><span class="o">[</span><span class="ss">:install_path</span><span class="o">]</span><span class="si">}</span><span class="s2">/sbin/nginx&quot;</span>
+
+<span class="n">default</span><span class="o">[</span><span class="ss">:nginx</span><span class="o">][</span><span class="ss">:archive_cache</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;/var/cache/downloads/nginx&quot;</span>
+
+<span class="n">default</span><span class="o">[</span><span class="ss">:nginx</span><span class="o">][</span><span class="ss">:tar_url</span><span class="o">]</span> <span class="o">=</span>
+  <span class="s2">&quot;http://sysoev.ru/nginx/nginx-</span><span class="si">#{</span><span class="n">node</span><span class="o">[</span><span class="ss">:nginx</span><span class="o">][</span><span class="ss">:version</span><span class="o">]</span><span class="si">}</span><span class="s2">.tar.gz&quot;</span>
+<span class="n">default</span><span class="o">[</span><span class="ss">:nginx</span><span class="o">][</span><span class="ss">:tar_checksum</span><span class="o">]</span> <span class="o">=</span>
+  <span class="s2">&quot;2feb0acee473cc360a620ee862907b9570a4121956c40cbd27da35f5b0a96045&quot;</span>
+
+<span class="n">default</span><span class="o">[</span><span class="ss">:nginx</span><span class="o">][</span><span class="ss">:packages</span><span class="o">]</span> <span class="o">=</span> <span class="sx">%w{ build-essential binutils-doc autoconf</span>
+<span class="sx">                                 flex bison libpcre3 libpcre3-dev</span>
+<span class="sx">                                 libssl-dev }</span>
+
+<span class="n">default</span><span class="o">[</span><span class="ss">:nginx</span><span class="o">][</span><span class="ss">:configure_flags</span><span class="o">]</span> <span class="o">=</span> <span class="o">[</span>
+  <span class="s2">&quot;--prefix=</span><span class="si">#{</span><span class="n">nginx</span><span class="o">[</span><span class="ss">:install_path</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;--conf-path=</span><span class="si">#{</span><span class="n">nginx</span><span class="o">[</span><span class="ss">:dir</span><span class="o">]</span><span class="si">}</span><span class="s2">/nginx.conf&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;--with-http_ssl_module&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;--with-http_gzip_static_module&quot;</span>
+<span class="o">]</span>
+<span class="n">default</span><span class="o">[</span><span class="ss">:nginx</span><span class="o">][</span><span class="ss">:extra_configure_flags</span><span class="o">]</span> <span class="o">=</span> <span class="o">[]</span>
+</pre>

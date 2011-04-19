@@ -1,6 +1,9 @@
 {
   "slides": [
     "welcome.html",
+    "whoami.html",
+    "talk-url.html",
+    "rundown.html",
     "script-variables.html",
     "script-prereqs.html",
     "script-cache-dir.html",
@@ -19,7 +22,13 @@
     "initial-conf-dirs.html",
     "initial-conf-files.html",
     "initial-service.html",
-    "package-recipe.html"
+    "package-recipe.html",
+    "refactored-attributes.html",
+    "refactored-variables.html",
+    "refactored-prereqs.html",
+    "refactored-cache-dir.html",
+    "refactored-dl-extract.html",
+    "refactored-compile.html"
   ],
   "title": "Iterative Chef",
   "plugins": [

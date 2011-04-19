@@ -1,0 +1,17 @@
+<h1>Refactored: Variables</h1>
+
+<pre class="codehilite">
+<div class="highlight"><pre><span class="n">cache_dir</span>     <span class="o">=</span> <span class="n">node</span><span class="o">[</span><span class="ss">:nginx</span><span class="o">][</span><span class="ss">:archive_cache</span><span class="o">]</span>
+<span class="n">tar_url</span>       <span class="o">=</span> <span class="n">node</span><span class="o">[</span><span class="ss">:nginx</span><span class="o">][</span><span class="ss">:tar_url</span><span class="o">]</span>
+<span class="n">tar_checksum</span>  <span class="o">=</span> <span class="n">node</span><span class="o">[</span><span class="ss">:nginx</span><span class="o">][</span><span class="ss">:tar_checksum</span><span class="o">]</span>
+<span class="n">tar_file</span>      <span class="o">=</span> <span class="n">tar_url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">last</span>
+<span class="n">tar_dir</span>       <span class="o">=</span> <span class="n">tar_file</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sr">/\.tar\.gz$/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="k">unless</span> <span class="n">node</span><span class="o">[</span><span class="ss">:nginx</span><span class="o">][</span><span class="ss">:extra_configure_flags</span><span class="o">].</span><span class="n">empty?</span>
+  <span class="n">node</span><span class="o">[</span><span class="ss">:nginx</span><span class="o">][</span><span class="ss">:configure_flags</span><span class="o">].</span><span class="n">push</span><span class="p">(</span>
+    <span class="o">*</span><span class="n">node</span><span class="o">[</span><span class="ss">:nginx</span><span class="o">][</span><span class="ss">:extra_configure_flags</span><span class="o">]</span><span class="p">)</span>
+<span class="k">end</span>
+<span class="n">configure_flags</span> <span class="o">=</span> <span class="n">node</span><span class="o">[</span><span class="ss">:nginx</span><span class="o">][</span><span class="ss">:configure_flags</span><span class="o">]</span>
+
+<span class="n">pkgs</span> <span class="o">=</span> <span class="n">node</span><span class="o">[</span><span class="ss">:nginx</span><span class="o">][</span><span class="ss">:packages</span><span class="o">]</span>
+</pre>
