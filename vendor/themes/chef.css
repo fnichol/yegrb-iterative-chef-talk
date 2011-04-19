@@ -1,6 +1,6 @@
 body          { background-color: #FFFFFF }
 
-body          { font-family: 'Architects Daughter', arial, serif; }
+h1, h2, h3          { font-family: 'Architects Daughter', arial, serif; }
 
 div.slide     { display: block !important; margin: 0; padding: 0 2em; color: #000000 }
 
