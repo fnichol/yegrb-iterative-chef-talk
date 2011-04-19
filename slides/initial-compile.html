@@ -1,0 +1,12 @@
+<h1>Initial: Compile</h1>
+
+<pre class="codehilite">
+<span class="n">execute</span> <span class="s2">&quot;compile nginx&quot;</span> <span class="k">do</span>
+  <span class="n">user</span>      <span class="s2">&quot;root&quot;</span>
+  <span class="n">group</span>     <span class="s2">&quot;root&quot;</span>
+  <span class="n">cwd</span>       <span class="s2">&quot;</span><span class="si">#{</span><span class="n">cache_dir</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">tar_dir</span><span class="si">}</span><span class="s2">&quot;</span>
+  <span class="n">command</span>   <span class="sx">%{./configure </span><span class="si">#{</span><span class="n">configure_flags</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span><span class="si">}</span><span class="sx"> &amp;&amp; make &amp;&amp; make install}</span>
+  <span class="n">creates</span>   <span class="s2">&quot;/opt/</span><span class="si">#{</span><span class="n">tar_dir</span><span class="si">}</span><span class="s2">/sbin/nginx&quot;</span>
+  <span class="n">notifies</span>  <span class="ss">:restart</span><span class="p">,</span> <span class="s2">&quot;service[nginx]&quot;</span>
+<span class="k">end</span>
+</pre>

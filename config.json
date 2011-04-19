@@ -8,7 +8,17 @@
     "script-compile.html",
     "script-config-dirs.html",
     "script-config-files.html",
-    "script-service.html"
+    "script-service.html",
+    "chef-first-recipe.html",
+    "initial-variables.html",
+    "initial-prereqs.html",
+    "initial-cache-dir.html",
+    "initial-dl.html",
+    "initial-extract.html",
+    "initial-compile.html",
+    "initial-conf-dirs.html",
+    "initial-conf-files.html",
+    "initial-service.html"
   ],
   "title": "Iterative Chef",
   "plugins": [

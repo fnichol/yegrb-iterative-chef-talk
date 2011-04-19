@@ -1,0 +1,11 @@
+<h1>Initial: Extract</h1>
+
+<pre class="codehilite">
+<span class="n">execute</span> <span class="s2">&quot;extract nginx tarball&quot;</span> <span class="k">do</span>
+  <span class="n">user</span>      <span class="s2">&quot;root&quot;</span>
+  <span class="n">group</span>     <span class="s2">&quot;root&quot;</span>
+  <span class="n">cwd</span>       <span class="n">cache_dir</span>
+  <span class="n">command</span>   <span class="sx">%{tar zxf </span><span class="si">#{</span><span class="n">tar_file</span><span class="si">}</span><span class="sx">}</span>
+  <span class="n">creates</span>   <span class="s2">&quot;</span><span class="si">#{</span><span class="n">cache_dir</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">tar_dir</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">end</span>
+</pre>
