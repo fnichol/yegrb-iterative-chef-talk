@@ -18,7 +18,8 @@
     "initial-compile.html",
     "initial-conf-dirs.html",
     "initial-conf-files.html",
-    "initial-service.html"
+    "initial-service.html",
+    "package-recipe.html"
   ],
   "title": "Iterative Chef",
   "plugins": [
