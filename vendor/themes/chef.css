@@ -7,6 +7,17 @@ div.slide     { display: block !important; margin: 0; padding: 0 2em; color: #00
 /* override centered */
 body .slide h1, h2, h3 { text-align: left; margin: 0 }
 body .slide p          { text-align: left; margin: 0 }
+pre.codehilite {
+  text-align: left;
+  margin: 1em 15% 0 15%;
+  padding: 0.5em 0.5em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  -webkit-box-shadow: 0 0 12px rgba(128, 128, 128, 0.5);
+  -moz-box-shadow: 0 0 12px rgba(128, 128, 128, 0.5);
+  box-shadow: 0 0 12px rgba(128, 128, 128, 0.5);
+}
 
 a                 { color: #499DFF }
 ul, ol            { list-style-position: inside }

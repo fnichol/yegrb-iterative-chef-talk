@@ -1,0 +1,11 @@
+<h1>Script: Download and Extract</h1>
+
+<pre class="codehilite">
+log <span class="s2">&quot;Downloading nginx tarball from $tar_url&quot;</span>
+rm -f <span class="nv">$cache_dir</span>/<span class="nv">$tar_file</span>
+<span class="o">(</span><span class="nb">cd</span> <span class="nv">$cache_dir</span> <span class="o">&amp;&amp;</span> wget <span class="nv">$tar_url</span><span class="o">)</span>
+
+log <span class="s2">&quot;Extracting nginx tarball into $cache_dir&quot;</span>
+rm -rf <span class="nv">$cache_dir</span>/<span class="nv">$tar_dir</span>
+<span class="o">(</span><span class="nb">cd</span> <span class="nv">$cache_dir</span> <span class="o">&amp;&amp;</span> tar zxf <span class="nv">$tar_file</span><span class="o">)</span>
+</pre>

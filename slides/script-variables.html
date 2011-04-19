@@ -1,0 +1,20 @@
+<h1>Script: Variables</h1>
+
+<pre class="codehilite">
+<span class="nv">cache_dir</span><span class="o">=</span><span class="s2">&quot;/var/cache/downloads&quot;</span>
+
+<span class="nv">tar_url</span><span class="o">=</span><span class="s2">&quot;http://nginx.org/download/nginx-0.9.7.tar.gz&quot;</span>
+
+<span class="nv">tar_file</span><span class="o">=</span><span class="s2">&quot;${tar_url##http*/}&quot;</span>
+
+<span class="nv">tar_dir</span><span class="o">=</span><span class="s2">&quot;${tar_file%.tar.gz}&quot;</span>
+
+<span class="nv">configure_flags</span><span class="o">=</span><span class="s2">&quot;</span>
+<span class="s2">  --prefix=/opt/${tar_dir}</span>
+<span class="s2">  --conf-path=/etc/nginx/nginx.conf</span>
+<span class="s2">  --with-http_ssl_module</span>
+<span class="s2">&quot;</span>
+
+<span class="nv">pkgs</span><span class="o">=(</span> wget build-essential binutils-doc autoconf flex bison
+       libpcre3 libpcre3-dev libssl-dev <span class="o">)</span>
+</pre>

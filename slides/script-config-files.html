@@ -1,0 +1,24 @@
+<h1>Script: Config Files</h1>
+
+<pre class="codehilite">
+log <span class="s2">&quot;Installing /etc/nginx/nginx.conf...&quot;</span>
+wget --no-check-certificate <span class="se">\</span>
+  <span class="s1">&#39;https://gist.github.com/raw/924883/nginx.conf&#39;</span> <span class="se">\</span>
+  -O /etc/nginx/nginx.conf
+chown root:root /etc/nginx/nginx.conf
+chmod 644 /etc/nginx/nginx.conf
+
+log <span class="s2">&quot;Installing /etc/nginx/sites-enabled/_default.conf...&quot;</span>
+wget --no-check-certificate <span class="se">\</span>
+  <span class="s1">&#39;https://gist.github.com/raw/924883/default-site.conf&#39;</span> <span class="se">\</span>
+  -O /etc/nginx/sites-enabled/_default.conf
+chown root:root /etc/nginx/sites-enabled/_default.conf
+chmod 644 /etc/nginx/sites-enabled/_default.conf
+
+log <span class="s2">&quot;Installing /etc/init.d/nginx...&quot;</span>
+wget --no-check-certificate <span class="se">\</span>
+  <span class="s1">&#39;https://gist.github.com/raw/924883/nginx.init.sh&#39;</span> <span class="se">\</span>
+  -O /etc/init.d/nginx
+chown root:root /etc/init.d/nginx
+chmod 755 /etc/init.d/nginx
+</pre>

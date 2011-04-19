@@ -1,0 +1,10 @@
+<h1>Script: Config Directories</h1>
+
+<pre class="codehilite">
+<span class="k">for </span>dir in /var/log/nginx /etc/nginx/<span class="o">{</span>conf.d,sites-enabled<span class="o">}</span> ; <span class="k">do</span>
+<span class="k">  </span>log <span class="s2">&quot;Creating $dir directory...&quot;</span>
+  mkdir -p <span class="nv">$dir</span>
+  chown root:root <span class="nv">$dir</span>
+  chmod 755 <span class="nv">$dir</span>
+<span class="k">done</span> ; <span class="nb">unset </span>dir
+</pre>

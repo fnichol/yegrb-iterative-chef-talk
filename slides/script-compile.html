@@ -1,0 +1,7 @@
+<h1>Script: Compile</h1>
+
+<pre class="codehilite">
+log <span class="s2">&quot;Building nginx&quot;</span>
+<span class="o">(</span><span class="nb">cd</span> <span class="nv">$cache_dir</span>/<span class="nv">$tar_dir</span> <span class="o">&amp;&amp;</span> ./configure <span class="nv">$configure_flags</span><span class="o">)</span>
+<span class="o">(</span><span class="nb">cd</span> <span class="nv">$cache_dir</span>/<span class="nv">$tar_dir</span> <span class="o">&amp;&amp;</span> make <span class="o">&amp;&amp;</span> make install<span class="o">)</span>
+</pre>

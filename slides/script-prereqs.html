@@ -1,0 +1,11 @@
+<h1>Script: Install Packages</h1>
+
+<pre class="codehilite">
+<span class="nv">pkgs</span><span class="o">=(</span> wget build-essential binutils-doc autoconf flex bison
+       libpcre3 libpcre3-dev libssl-dev <span class="o">)</span>
+
+<span class="k">for </span>pkg in <span class="s2">&quot;${pkgs[@]}&quot;</span> ; <span class="k">do</span>
+<span class="k">  </span>log <span class="s2">&quot;Installing ${pkg}...&quot;</span>
+  apt-get install -y <span class="nv">$pkg</span>
+<span class="k">done</span> ; <span class="nb">unset </span>pkg
+</pre>

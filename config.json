@@ -1,7 +1,20 @@
 {
-  "slides":       ["welcome.html"],
-  "title":        "Iterative Chef",
-  "plugins":      ["resize", "iphone"],
-  "theme":        "chef",
-  "transitions":  "fade"
+  "slides": [
+    "welcome.html",
+    "script-variables.html",
+    "script-prereqs.html",
+    "script-cache-dir.html",
+    "script-dl-extract.html",
+    "script-compile.html",
+    "script-config-dirs.html",
+    "script-config-files.html",
+    "script-service.html"
+  ],
+  "title": "Iterative Chef",
+  "plugins": [
+    "resize",
+    "iphone"
+  ],
+  "theme": "chef",
+  "transitions": "fade"
 }
