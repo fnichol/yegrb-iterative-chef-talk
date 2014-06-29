@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'json/pure'
+require 'json'
 
 use Rack::Static,
   :root => File.dirname(__FILE__),
